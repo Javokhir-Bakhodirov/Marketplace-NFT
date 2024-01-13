@@ -1,0 +1,110 @@
+.catalog-section {
+	padding: 80px 0;
+}
+.catalog {
+}
+.catalog__top-content {
+	width: 100%;
+	@include display($justify: space-between, $align: center);
+}
+.top__text-box {
+	// @include display($direction: column);
+}
+.top__title {
+	@include textStyle($fs: 38px, $fw: 600, $lh: 120%);
+}
+.top__text {
+	@include textStyle($fs: 22px, $fw: 400, $lh: 160%);
+}
+
+.catalog_cards {
+	margin-top: 60px;
+}
+.catalog__list {
+	@include display($justify: space-between);
+}
+.catalog__item {
+	@include display($direction: column);
+	height: 445px;
+	width: 330px;
+	padding-top: 460px;
+}
+.catalog__item1 {
+	background-image: url(../../images/catalog/catalog-img1.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 445px;
+}
+.catalog__subtitle {
+	@include textStyle($fs: 22px, $fw: 400, $lh: 160%);
+}
+.catalog__subtext {
+	@include textStyle($fs: 16px, $fw: 400, $lh: 140%);
+	padding-left: 36px;
+	position: relative;
+}
+.catalog__item2 {
+	background-image: url(../../images/catalog/catalog-img2.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 445px;
+}
+.catalog__item3 {
+	background-image: url(../../images/catalog/catalog-img3.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 445px;
+}
+
+.subtext1::before {
+	position: absolute;
+	content: "";
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+	background-image: url(../images/catalog/c-avatar1.svg);
+	left: 0;
+}
+.subtext2::before {
+	position: absolute;
+	content: "";
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+	background-image: url(../images/catalog/c-avatar2.svg);
+	left: 0;
+}
+.subtext3::before {
+	position: absolute;
+	content: "";
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+	background-image: url(../images/catalog/c-avatar3.svg);
+	left: 0;
+}
+
+@media (max-width: 1055px) {
+	.catalog__item3 {
+		display: none;
+	}
+
+	.catalog__list {
+		@include display($justify: space-around);
+	}
+}
+
+@media (max-width: 940px) {
+	.catalog-section {
+		padding: 40px 0;
+	}
+	.top__title {
+		@include textStyle($fs: 28px, $fw: 600, $lh: 140%);
+	}
+	.top__text {
+		@include textStyle($fs: 16px, $fw: 400, $lh: 140%);
+	}
+}
+
+@media (max-width: 730px) {
+	.catalog__item2 {
+		display: none;
+	}
+}

@@ -15,7 +15,14 @@
 	text-transform: capitalize;
 }
 
-@mixin btn($w: 152px, $py: 20px, $bg: #a259ff, $bgImg: "", $bgImgHover: "") {
+@mixin btn(
+	$w: 152px,
+	$py: 20px,
+	$bg: #a259ff,
+	$bgImg: "",
+	$bgImgHover: "",
+	$bgbc: #a259ff
+) {
 	position: relative;
 	width: $w;
 	padding: $py 0;
@@ -25,6 +32,7 @@
 	padding-left: 32px;
 	border: 1px solid transparent;
 	transition: all 0.4s linear;
+	border-color: $bgbc;
 
 	&::before {
 		content: "";
@@ -42,7 +50,7 @@
 	}
 	&:hover {
 		background-color: transparent;
-		border-color: $bg;
+		border-color: $bgbc;
 		color: $bg;
 	}
 	@include textStyle($fw: 600, $tAlign: center);
